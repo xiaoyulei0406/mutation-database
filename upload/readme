@@ -1,0 +1,1 @@
+Rscript pdf2excel.R -i inputpdf/ -o output/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Request URL Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Request URL</h1>
+    </div>
+    <div class="jumbotron">
+      <form action='/' method='POST' enctype = "multipart/form-data">
+          <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;" autofocus required>
+          <label for="inputEmail" class="sr-only">Email address</label>
+         <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required>
+        <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      <br>
+      <h3> Recent Job Statuses </h3>
+      {% for job in jobs %}
+        <a href="/status/{{job}}">{{ job }} </a>
+        <br>
+      {% endfor %}
+      <h3> Recent Job Results</h3>
+      {% for job in jobs %}
+        <a href="/results/{{job}}">{{ job }} </a>
+        <br>
+      {% endfor %}
+    </div>
+    <script src="{{ url_for('static', filename='js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
