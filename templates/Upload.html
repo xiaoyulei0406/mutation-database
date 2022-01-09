@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://v3.bootcss.com/examples/justified-nav/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>###Upload###</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./static/bootstrap/css/custom.css" rel="stylesheet">
+    <link href="./static/bootstrap/css/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./static/bootstrap/js/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script><script>window["_GOOG_TRANS_EXT_VER"] = "1";</script></head>
+
+  <body>
+    <div class="navbar navbar_custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class = "navbar-brand">Patient Mutation Database</a>
+      </div><!-- /navbar-head -->
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li ><a class="active navbar_custom" href="/">Home</a></li>
+          <li><a class="navbar_custom" href="/Upload">Upload</a></li>
+          <li><a class="navbar_custom" href="/Document">Document</a></li>
+          <li><a class="navbar_custom" href="/Download">Download</a></li>
+          <li><a class="navbar_custom" href="/Contact">Contact</a></li>
+        </ul>
+      </div> <!-- /navbar-collapse -->
+    </div><!-- /container -->
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="container_for_main" class="container">
+      <h1>Document Upload</h3>
+      <br/>
+      <br/>
+      <br/>  
+          <form action='/Upload' method='POST' enctype = "multipart/form-data" class="form-horizontal" name="main">
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Email <a class='mypopover' tabindex='0' data-trigger='focus' data-toggle='popover' data-content='Please provide an email address for your result. A message will be sent to the email address when the task is finished.'><span class="glyphicon glyphicon-info-sign" /></a>
+              </label>
+              <div class="col-sm-7">
+                <input class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter email to receive result link" type="email" style="max-width: 800px;" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Input PDF files<a class='mypopover' tabindex='0' data-trigger='focus' data-toggle='popover' data-content="Please upload pdf files or provide URL of fdf files."><span class="glyphicon glyphicon-info-sign" /></a>
+              </label>
+              <div class="col-sm-7">
+                <div id="query_file_div_id">
+                    <input class="form-control" id="inputFile" name="inputFile" type="file" />
+                    <strong>OR</strong>
+                    <input class="form-control" id="url-box" name="url" placeholder="Paste Enter URL..." type="url" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-3">
+                <input type="submit" name=".submit" class="btn btn-primary" />
+        </div>
+      </div>
+
+
+
+<!--older broswer--
+            <strong><font color=black>Email</font><font color=grey></font></strong>:
+            <p class="text-muted"><font size="2">Please provide an email address for your result. A message will be sent to the email address when the task is finished.</font></p>
+            <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address..." style="max-width: 300px;" required>
+
+            <br/>
+            <strong><font color=Black>Upload HIC_Data</font><font color=grey></font></strong>:
+            <p class="text-muted"><font size="2">Upload Hic_Data format sequences file:</font></p>
+            <input id="inputFile" name="inputFile" type="file" size="60"/>
+
+            <p class="text-muted"><font size="2">Or Paste Hic_Data url here:</font></p>
+            <input type="text" name="url" class="form-control" id="url-box" placeholder="Enter URL..." style="max-width: 300px;" autofocus required>
+
+            <br/>
+            <strong><font color=Black>Start Calculation</font><font color=grey></font></strong>:
+            <p class="text-muted"><font size="2">Press submit to start your job:</font></p>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+      </div><!-- /container -->
+
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
+    <!-- Site footer -->
+      <div class="footer">
+      <center>
+        <!-- Information need to be changed -->
+        <p>Copyright<a href="https://github.com/xiaoyulei0406/mutation-database">&copy; Chunlei</a></p>
+        <p>Any comments and suggestions, please <a href="/Contact">contact me</a></p>
+      </center>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./static/bootstrap/js/ie10-viewport-bug-workaround.js"></script> 
+  </body>
+</html>
