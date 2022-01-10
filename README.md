@@ -1,15 +1,5 @@
-# mutation-database
-Ongoing project............
-Extract mutation from PDF files
-
-
-
-
-
-
-
 # Patient Mutation Information Database
-
+Ongoing project............
 It is still being updated.
 
 ### Introduction:
